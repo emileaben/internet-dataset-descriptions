@@ -3,8 +3,16 @@
 The RPKI repo archive is at https://ftp.ripe.net/rpki/ 
 
 The archive is structured as follows:
-   * Subdirectory per trust anchor (XXX explain the APNIC situation)
-   * Directories per day (XXX document structure)
+   https://ftp.ripe.net/rpki/TAL/YYYY/MM/DD/
+with:
+   * TAL : Trust anchor [1]
+   * YYYY : Year
+   * MM   : Month
+   * DD   : Day
+
+The individual daily directories per trust anchor contain 2 files:
+   * repo.tar.gz : The raw repository content (as a tar-gzipped archive)
+   * roas.csv    : The VRPs (Verified ROA Payloads) that were extacted from the PKI materials
  
 ##  Data Issues
 
@@ -34,3 +42,5 @@ Data collection switched from rpki-validator-2 to routinator 0.10.1.
   * The container running the job does not have IPv6 connectivity.
 
 **Known issue:** A large fraction of the days has partial data for APNIC.
+
+TODO document this better
