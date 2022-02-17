@@ -29,6 +29,7 @@ The containers running the data collection job have IPv6 connectivity
 
 Data collection switched from rpki-validator-2 to routinator 0.10.1.
 
+  * routinator starts with a clean cache every day.
   * `rrdp` is not enabled (similar to rpki-validator-2).
   * The container running the job does not have IPv6 connectivity.
 
